@@ -1,0 +1,137 @@
+.container {
+    width: 640px;
+    margin: auto;
+    margin-top: 150px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+    padding: 40px 50px;
+}
+
+.container hr {
+    height: 2px;
+    border: none;
+    background: black;
+}
+
+.container h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.container ul li:active {
+    transform: scale(0.95); /* Scale down on press */
+    background-color: #f0f0f0; /* Slightly change background color on click */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a pressed look */
+}
+
+/* Hover effect to make options more interactive */
+.container ul li:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Faster hover effect */
+}
+
+.container button {
+    margin: auto;
+    width: 250px;
+    height: 60px;
+    background: black;
+    color: beige;
+    font-size: 25px;
+    font-weight: 500px;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.container button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.container button:active {
+    transform: scale(0.95); 
+    background-color: #222; 
+}
+
+.container .index {
+    margin: auto;
+    font-size: 19px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* .container .correct {
+    background: #dffff2;
+    border-color: #00d397;
+}
+
+.container .wrong {
+    background: #ffebeb;
+    border-color: #ff4a4a;
+} */
+
+.container .correct {
+    background: #dffff2;
+    border-color: #00d397;
+    animation: correctAnimation 0.25s ease-in-out;
+}
+
+@keyframes correctAnimation {
+    0% {
+        background-color: white;
+        border-color: black;
+    }
+    50% {
+        background-color: #dffff2;
+        border-color: #00d397;
+    }
+    100% {
+        background-color: #dffff2;
+        border-color: #00d397;
+    }
+}
+
+.container .wrong {
+    background: #ffebeb;
+    border-color: #ff4a4a;
+    animation: wrongAnimation 0.25s ease-in-out;
+}
+
+@keyframes wrongAnimation {
+    0% {
+        background-color: white;
+        border-color: black;
+    }
+    50% {
+        background-color: #ffebeb;
+        border-color: #ff4a4a;
+    }
+    100% {
+        background-color: #ffebeb;
+        border-color: #ff4a4a;
+    }
+}
+
